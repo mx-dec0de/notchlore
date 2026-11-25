@@ -21,7 +21,7 @@ The release includes local tools and prompt packs. Hosted infrastructure, schedu
 
 ## Release status
 
-The local distribution is a release candidate. Production qualification is open. [VALIDATION.md](VALIDATION.md) records the checks run for this candidate and the environments still to be exercised.
+The npm account `resultity` published `notchlore@2.0.0`. This GitHub source carries revised documentation, metadata and regenerated mode packs. Production qualification remains open. See the [validation record](VALIDATION.md) for tested workflows and environments.
 
 ## Users, value and economics
 

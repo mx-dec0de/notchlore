@@ -1,6 +1,6 @@
 # Changes
 
-## 2.0.0 · First public release candidate
+## 2.0.0 · First public npm release
 
 - Install the Notch Lore skill in a project or user directory. Preview changes, repeat an installation, or update an owned skill with a recovery copy.
 - Inspect project files, instructions, skills and Git status.

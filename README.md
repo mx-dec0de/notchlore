@@ -23,51 +23,54 @@ Start anywhere in the loop. You can explore an idea, review an existing applicat
 
 ## Choose a mode
 
-| Mode | Use it for | What you need |
-| --- | --- | --- |
-| **ChatGPT** | Develop an idea, plan a project, make diagrams or review material in ChatGPT. | The ChatGPT mode ZIP. |
-| **ChatGPT + Codex** | Plan in ChatGPT, implement in Codex, then review the return. | The ChatGPT + Codex ZIP and the installed Codex skill. |
-| **ChatGPT + Codex + Dot** | Coordinate the same loop through an existing, verified Dot connection. | The Dot mode ZIP and actual authorized tools. If they are unavailable, use the manual handoff. |
+| Download from GitHub | Use it when |
+| --- | --- |
+| [ChatGPT only](dist/notchlore-chatgpt-2.0.0.zip) | You want to explore an idea, draw a workflow or review project material in ChatGPT. |
+| [ChatGPT + Codex](dist/notchlore-chatgpt-codex-2.0.0.zip) | You want to plan in ChatGPT, implement in a local project with Codex and bring the results back for review. |
+| [ChatGPT + Codex + Dot](dist/notchlore-chatgpt-codex-dot-2.0.0.zip) | You have an existing, authorized Dot connection to the project and Codex. |
 
-Download one pack: [ChatGPT](dist/notchlore-chatgpt-2.0.0.zip) · [ChatGPT + Codex](dist/notchlore-chatgpt-codex-2.0.0.zip) · [ChatGPT + Codex + Dot](dist/notchlore-chatgpt-codex-dot-2.0.0.zip). On GitHub, open the ZIP and click **Download raw file**, then attach it to your planning chat.
+On GitHub, follow the link for your mode and click **Download raw file** on the ZIP’s file page. Attach that one ZIP to a new ChatGPT conversation. For an existing project, also attach its current documents or a reviewed source snapshot. For a new project, a sentence about your goal is enough.
 
 ## Get started
 
-### Plan in ChatGPT
+### ChatGPT only
 
-Upload `notchlore-chatgpt-2.0.0.zip`. For an existing project, also attach current documentation and a reviewed source snapshot. Then send:
+With the ChatGPT-only pack attached, send a goal in your own words. For example:
 
 ```text
-notchlore. Read START.md. Here is my project. Help me understand it and choose the next useful improvement.
+notchlore. Read START.md. I want volunteers to organize community workshops. Help me choose the first version and sketch how a volunteer would use it.
 ```
 
-For ChatGPT + Codex, use `notchlore-chatgpt-codex-2.0.0.zip` instead. Explain the outcome you want; you do not need to provide an architecture or select a database first.
+Keep planning in that chat and download the project documents you want to keep. This mode needs no local installation.
 
-### Install the Codex skill
+### Install the Codex skill from npm
 
-Requires Node.js **22 or newer**. Python 3 is needed for the packet ZIP commands. From the extracted release's `notchlore/` directory:
+For either mode that uses Codex, open a terminal in the project where Codex will work. You need Node.js **22 or newer** with npm. The packet ZIP commands also require Python 3.
 
 ```bash
-npx --yes --package=./dist/notchlore-2.0.0.tgz notchlore install --dir /path/to/project
+npx --yes --package=notchlore@2.0.0 notchlore install --dir /path/to/project
 ```
 
-Open Codex in that project and send:
+Replace `/path/to/project` with the existing project directory that you will open in Codex. Use `.` if you are already in that directory, or quote a path that contains spaces. The installer creates `.agents/skills/notchlore/` there with the skill instructions, references and an installation receipt.
+
+The npm command uses version 2.0.0 published by `resultity`. The revised docs, repository metadata and downloadable packs here belong to the GitHub source. For a locally built tarball, see the [alternative install instructions](GUIDE.md#local-tarball-alternative).
+
+### ChatGPT + Codex
+
+1. With the ChatGPT + Codex pack attached, send `notchlore. Read START.md. Help me plan [goal] and define how we’ll check it.` Replace `[goal]` with the change you want.
+2. Once you accept the plan, ask ChatGPT for the task ZIP, staging instructions and short Codex starter. Download the task ZIP and copy it to the project machine.
+3. Follow the task’s `START.md` to check the project baseline and unpack into the fresh staging directory it names. Open Codex in the project, invoke `$notchlore` and give it the supplied starter with the staged task path.
+4. Upload Codex’s return ZIP to the **same planning chat**. Ask ChatGPT to compare the changed files and test results with the accepted task. The [guide](GUIDE.md#4-transfer-an-approved-task) includes staging details and a runnable packet example.
+
+### ChatGPT + Codex + Dot
+
+With the Dot pack attached, replace `[goal]` and send:
 
 ```text
-$notchlore Help me understand this project and recommend the next useful step.
+notchlore. Read START.md. Help me plan [goal]. Check whether Dot can reach my project, dispatch to Codex and return the results. If a step is unavailable, prepare the manual task packet.
 ```
 
-The installer creates `.agents/skills/notchlore/` in the selected project. Installing it does not connect ChatGPT to your machine, create a background service or start an agent. To update an unedited Notch Lore skill, use the newer tarball with `install --update`. The installer reports where it saved the previous copy.
-
-### Move work between ChatGPT and Codex
-
-1. In ChatGPT, develop and accept a specific change.
-2. Ask for a complete task packet and its placement instructions.
-3. Transfer the packet to the project machine and follow its `START.md` to validate and stage it. Do not extract it over live project files.
-4. In Codex, activate `$notchlore` and ask it to carry out the staged task within the accepted scope.
-5. Transfer the return to ChatGPT for review and reconciliation.
-
-See [GUIDE.md](GUIDE.md) for staging requirements, packet limits and recovery. Uploading a ZIP to ChatGPT does not place it on your computer; installing the skill does not give ChatGPT access to your files.
+Dot needs an existing, authorized connection. Once the plan is approved and the route verified, use it to deliver the task and collect the changes and evidence. If access is missing, use the ChatGPT + Codex steps above to carry the task out and bring the return ZIP back yourself.
 
 ## What it can help you do
 
@@ -122,6 +125,6 @@ npm run check
 npm run release
 ```
 
-The maintained skill is in `skills/notchlore/`; shared prompts are in `prompts/`. See [PUBLICATION.md](PUBLICATION.md) before publishing a release.
+The maintained skill is in `skills/notchlore/`; shared prompts are in `prompts/`. See [PUBLICATION.md](PUBLICATION.md) for the GitHub distribution and local build procedure.
 
 Distributed under the [MIT license](LICENSE).

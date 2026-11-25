@@ -1,6 +1,12 @@
 # Notch Lore 2.0.0 validation
 
-Local checks for the first public release candidate ran on Linux x86-64 with Python 3.12.3. The unit suite passed all 75 tests on Node.js 22.22.3 and 24.1.0. The package and generated-summary checks passed on both. The release build used Node.js 24.1.0 and npm 11.5.1.
+## GitHub documentation update
+
+The pinned npm command installed the published 2.0.0 skill in a disposable project. The source manifest and the three tracked ChatGPT ZIPs were regenerated from the revised GitHub source. The full local build reported a failure in `test/cli.test.mjs` during its unit-test step. The ignored tarball, source bundle and outer checksum list in this workspace belong to the earlier build. The optional offline smoke suite was skipped for this update.
+
+## Earlier release candidate
+
+Local checks for the earlier release candidate ran on Linux x86-64 with Python 3.12.3. The unit suite passed all 75 tests on Node.js 22.22.3 and 24.1.0. The package and generated-summary checks passed on both. The release build used Node.js 24.1.0 and npm 11.5.1.
 
 | Check | Coverage |
 | --- | --- |

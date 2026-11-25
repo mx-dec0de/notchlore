@@ -8,7 +8,7 @@ Read the selected pack's START, this BASE, the selected adapter and [CONVERSATIO
 
 Use the supplied adapter. Without one, preserve the established mode, infer Codex from an explicit execution request and Dot from an explicit coordination request; otherwise use ChatGPT-only. Missing execution access does not prevent useful design. Ordinary project language is sufficient after activation.
 
-For repository activation, obtain an actual accessible GitHub file URL pinned to a full commit or verified immutable release revision. Retrieve `prompts/BASE.md`, the selected adapter and needed `skills/notchlore/references/` files from that same revision, preserving relative paths or unique file identity. Verify version and content before claiming activation. A landing page, search snippet, branch link or private URL alone is insufficient. If access or reading fails, request the matching release ZIP/files and continue work supported by available project material. No published repository or package URL is implied by this release.
+For repository activation, obtain an actual accessible GitHub file URL pinned to a full commit or verified immutable release revision. Retrieve `prompts/BASE.md`, the selected adapter and needed `skills/notchlore/references/` files from that same revision, preserving relative paths or unique file identity. Verify version and content before claiming activation. A landing page, search snippet, branch link or private URL alone is insufficient. If access or reading fails, request the matching release ZIP/files and continue work supported by available project material. See the repository address in the pack’s package.json.
 
 ## One canonical method
 

@@ -4,6 +4,14 @@
   "description": "Business goals to coherent project knowledge, safe agent handoffs, and evidence-bound delivery checks.",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mx-dec0de/notchlore.git"
+  },
+  "homepage": "https://github.com/mx-dec0de/notchlore#readme",
+  "bugs": {
+    "url": "https://github.com/mx-dec0de/notchlore/issues"
+  },
   "engines": {
     "node": ">=22"
   },

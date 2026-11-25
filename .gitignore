@@ -1,3 +1,17 @@
+# Local workspace state and generated reports
+/.agents/
+/.codex/
+/.aws/
+/.vscode/
+/.idea/
+/.cache/
+/.pytest_cache/
+/.tmp/
+/evidence/
+/demo-task.zip
+/demo-stage/
+/demo-workspace/
+
 node_modules/
 *.tgz
 .notchlore/

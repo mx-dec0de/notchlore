@@ -10,43 +10,53 @@ Notch Lore turns a business goal into current project documents, a complete impl
 | Plan in ChatGPT and build with Codex | **`notchlore-chatgpt-codex-2.0.0.zip`** |
 | Use an already connected Dot coordinator | `notchlore-chatgpt-codex-dot-2.0.0.zip` |
 
-Upload **one complete mode ZIP** to the planning chat. It contains START.md, the shared method and the selected adapter. No merging is needed. If ZIP reading is unavailable, extract and attach START.md, BASE.md, the adapter and relevant references. Send:
+From the [GitHub dist directory](https://github.com/mx-dec0de/notchlore/tree/main/dist), open the filename for your mode and click **Download raw file**. Attach that one ZIP to a new ChatGPT planning chat. It contains `START.md`, the shared method and the selected adapter. If the chat cannot read the ZIP, extract it locally and attach `START.md`, `prompts/BASE.md`, the selected adapter in `prompts/` and the relevant files from `skills/notchlore/references/`.
 
-```text
-notchlore. Read START.md in this pack. Here is my project. Help me choose the next useful version, develop the documents, and prepare the work.
-```
+Start with the message for your mode. Replace `[goal]` with what you want to achieve.
 
-An idea is enough to begin. For an existing application, add current documents and a reviewed source snapshot. Bare `notchlore` with no context should produce one plain question about your goal. Uploading files supplies them to this chat; it does not copy them to your computer or VPS.
+- **ChatGPT only** — “notchlore. Read START.md. Help me design [goal] and draw the main workflow.” Work through the decisions in the chat and download the current documents. You can skip the installation and packet steps.
+- **ChatGPT + Codex** — “notchlore. Read START.md. Help me plan [goal] and agree on the acceptance checks.” Install the skill in the receiving project (section 2). Once you accept the plan, carry the task to Codex (section 4) and the results back to this chat (section 7).
+- **Dot** — “notchlore. Read START.md. Help me plan [goal]. Verify Dot can access my project, run Codex and collect its return.” This requires an existing, authorized connection. Install the skill where Codex will work. If any part of the route is missing, ask for the full manual task packet and follow sections 4 and 7.
+
+An idea is enough to begin. For an existing application, add current documents and a reviewed source snapshot. Bare `notchlore` with no context should produce one plain question about your goal.
 
 ## 2. Install in the actual project
 
-The installer needs **Node.js 22 or newer**. ZIP packet commands additionally need **Python 3**; no npm or pip dependencies are installed. The source validation report names the environments actually tested.
-
-From the extracted release directory, replace the project path:
+Open a terminal in the project where Codex will work. Use **Node.js 22 or newer** with npm. ZIP packet commands also need **Python 3**. Install from the published npm package:
 
 ```sh
-npx --yes --package=./dist/notchlore-2.0.0.tgz notchlore install --dir /path/to/your/project
+npx --yes --package=notchlore@2.0.0 notchlore install --dir /path/to/project
 ```
 
-This creates `.agents/skills/notchlore/`, preserving application code, existing documents, AGENTS.md and other skills. Open Codex in the actual project and send:
+Replace `/path/to/project` with your existing project root, or use `.` when running from that directory. Quote paths with spaces. The installer creates `.agents/skills/notchlore/` under that root, with `SKILL.md`, references, agent metadata, a license and the `.notchlore-install.json` receipt. Open Codex in the same project and send:
 
 ```text
 $notchlore Show what this project already does, what is uncertain, and the next useful action. Preserve the current application and documents.
 ```
 
-Verify that Codex discovers the skill and reads the relevant references. Installing the skill does not install a persistent CLI command or start a process. For later CLI use, keep the local tarball prefix or run `node /path/to/notchlore/bin/notchlore.mjs`. Registry installation requires actual publication; see [PUBLICATION.md](PUBLICATION.md).
+Verify that Codex discovers the skill and reads the relevant references. To run another CLI command, reuse the same pinned runner, for example `npx --yes --package=notchlore@2.0.0 notchlore --help`.
+
+### Local tarball alternative
+
+Run `npm run release` in a clone of the GitHub repository to build the local tarball. From the root of that clone (or the `notchlore/` directory of an extracted full build), run:
+
+```sh
+npx --yes --package=./dist/notchlore-2.0.0.tgz notchlore install --dir /path/to/project
+```
+
+Replace the project path as above. This tarball contains the source used for the build, including its documentation and metadata. The registry command fetches the 2.0.0 package already published by `resultity`.
 
 ### Update an installed skill
 
-Use the newer tarball with the same project directory. For example, to update to 2.0.0:
+To update an earlier installation to the published 2.0.0 skill, use the same project directory:
 
 ```sh
-npx --yes --package=./dist/notchlore-2.0.0.tgz notchlore install --dir /path/to/your/project --update
+npx --yes --package=notchlore@2.0.0 notchlore install --dir /path/to/project --update
 ```
 
 The installer verifies the receipt and file hashes before replacing the skill. It reports the backup path under `.agents/.notchlore-backup-…`. An identical installation returns `unchanged`. If the skill contains local edits or lacks a valid receipt, the installer stops so you can review it. If a lock remains after an interruption, check whether an installer is still running before recovering it.
 
-Use `--dry-run` for a no-write preview. `--global` installs in your user `.agents/skills`; do not combine it with `--dir`.
+Use `--dry-run` for a no-write preview. For a user-wide install, use `--global` in place of `--dir /path/to/project`.
 
 ## 3. Describe the outcome
 
@@ -215,4 +225,4 @@ Use the Dot pack when an actual authorized coordination route exists. Ask the co
 | Local release checks and untested environments | `VALIDATION.md` |
 | Publication and release procedure | `PUBLICATION.md` |
 
-The three ChatGPT ZIPs are tracked in `dist/`. For the local installer, use the complete source release or run `npm run release` in a clone.
+The three ChatGPT ZIPs are tracked in `dist/`. For the published skill, use the npm command in section 2. The same section covers installation from a locally built tarball.
