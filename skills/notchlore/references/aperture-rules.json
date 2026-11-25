@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "policyId": "aperture.independent-types.v1",
+  "types": {
+    "DEF": { "name": "Deficit", "deduction": 4, "remedy": "Complete" },
+    "DIS": { "name": "Distortion", "deduction": 3, "remedy": "Correct" },
+    "EXC": { "name": "Excess", "deduction": 2, "remedy": "Simplify" },
+    "UNC": { "name": "Uncertainty", "deduction": 1, "remedy": "Establish evidence" }
+  },
+  "stages": { "Prototype": 5, "MVP": 7, "Production": 9 },
+  "dimensions": [
+    { "id": "D01", "quadrant": "Business", "name": "Business value" },
+    { "id": "D02", "quadrant": "Business", "name": "Scope and evolution" },
+    { "id": "D03", "quadrant": "Business", "name": "Economics and obligations" },
+    { "id": "D04", "quadrant": "Product", "name": "Features and experience" },
+    { "id": "D05", "quadrant": "Product", "name": "Flows and lifecycle" },
+    { "id": "D06", "quadrant": "Product", "name": "Access and trust" },
+    { "id": "D07", "quadrant": "Engineering", "name": "Architecture and code" },
+    { "id": "D08", "quadrant": "Engineering", "name": "Contracts and storage" },
+    { "id": "D09", "quadrant": "Engineering", "name": "Integration and compatibility" },
+    { "id": "D10", "quadrant": "Delivery", "name": "Deployment and operations" },
+    { "id": "D11", "quadrant": "Delivery", "name": "Performance and reliability" },
+    { "id": "D12", "quadrant": "Delivery", "name": "Verification and continuity" }
+  ]
+}

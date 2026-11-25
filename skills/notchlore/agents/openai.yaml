@@ -1,0 +1,4 @@
+interface:
+  display_name: "Notch Lore"
+  short_description: "Shape projects and complete changes with evidence"
+  default_prompt: "Use $notchlore to inspect this project, preserve its intended direction, and complete the current authorized outcome with current docs and evidence."

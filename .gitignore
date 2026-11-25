@@ -1,0 +1,15 @@
+node_modules/
+*.tgz
+.notchlore/
+.notchlore-*/
+coverage/
+.DS_Store
+dist/
+__pycache__/
+
+# Track the three downloadable ChatGPT packs in the root dist folder.
+!/dist/
+/dist/*
+!/dist/notchlore-chatgpt-2.0.0.zip
+!/dist/notchlore-chatgpt-codex-2.0.0.zip
+!/dist/notchlore-chatgpt-codex-dot-2.0.0.zip

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "task",
+  "id": "EXAMPLE-001",
+  "project": "Synthetic local text counter",
+  "scope": "One local UTF-8 text counter with the exact behavior in PROJECT.md; no network, deployment or paid dependencies.",
+  "baseline": { "revision": "empty", "files": {}, "empty": true },
+  "selectedPaths": ["PROJECT.md", "TASK.md"],
+  "requiredReferences": ["PROJECT.md", "TASK.md"],
+  "readingOrder": ["PROJECT.md", "TASK.md"],
+  "start": {
+    "task": "TASK.md",
+    "prompt": "$notchlore Read START.md and payload/TASK.md. Verify the empty receiving workspace, complete the approved task, and return actual evidence."
+  },
+  "authority": {
+    "allowed": ["Create the specified files only in the explicitly chosen empty example workspace", "Run local tests and correct in-scope failures"],
+    "forbidden": ["Overwrite existing application files", "Contact external services, install dependencies, deploy, publish or spend money"],
+    "budget": { "attempts": 3, "minutes": 20 }
+  },
+  "exclusions": [],
+  "privacy": {
+    "reviewed": true,
+    "reviewer": "Release author",
+    "notes": "Reviewed the two synthetic example documents. They contain no customer records or credentials. This acknowledgement is not an automated privacy guarantee."
+  }
+}

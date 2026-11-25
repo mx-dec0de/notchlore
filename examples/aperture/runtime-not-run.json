@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 1,
+  "id": "A-EXAMPLE-RUNTIME-1",
+  "plane": "implementation",
+  "stage": "MVP",
+  "scope": {
+    "id": "S-EXAMPLE",
+    "revision": "1",
+    "description": "Demonstrate a complete structurally valid assessment record; all findings and claims are synthetic."
+  },
+  "candidate": "example-candidate-1",
+  "environment": "local-example",
+  "reviewer": "Example author",
+  "reviewedAt": "2026-11-24T12:00:00Z",
+  "authority": {
+    "allowed": true,
+    "reason": "Local nonproduction example only.",
+    "blockers": []
+  },
+  "goals": [
+    {
+      "id": "G-EXAMPLE",
+      "outcome": "Exercise the documented assessment format.",
+      "mandatory": true,
+      "evidenceIds": [
+        "E-EXAMPLE"
+      ]
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "D01",
+      "status": "UNKNOWN",
+      "reviewedTypes": [],
+      "criteria": [
+        {
+          "id": "C-D01",
+          "description": "Scoped synthetic criterion: Business value.",
+          "goalIds": [
+            "G-EXAMPLE"
+          ]
+        }
+      ],
+      "evidenceIds": [],
+      "binding": {
+        "plane": "implementation",
+        "scopeId": "S-EXAMPLE",
+        "scopeRevision": "1",
+        "candidate": "example-candidate-1",
+        "environment": "local-example"
+      },
+      "reason": "Runtime assessment has not begun; documentation alone is not implementation evidence."
+    },
+    {
+      "id": "D02",
+      "status": "UNKNOWN",
+      "reviewedTypes": [],
+      "criteria": [
+        {
+          "id": "C-D02",
+          "description": "Scoped synthetic criterion: Scope and evolution.",
+          "goalIds": [
+            "G-EXAMPLE"
+          ]
+        }
+      ],
+      "evidenceIds": [],
+      "binding": {
+        "plane": "implementation",
+        "scopeId": "S-EXAMPLE",
+        "scopeRevision": "1",
+        "candidate": "example-candidate-1",
+        "environment": "local-example"
+      },
+      "reason": "Runtime assessment has not begun; documentation alone is not implementation evidence."
+    },
+    {
+      "id": "D03",
+      "status": "UNKNOWN",
+      "reviewedTypes": [],
+      "criteria": [
+        {
+          "id": "C-D03",
+          "description": "Scoped synthetic criterion: Economics and obligations.",
+          "goalIds": [
+            "G-EXAMPLE"
+          ]
+        }
+      ],
+      "evidenceIds": [],
+      "binding": {
+        "plane": "implementation",
+        "scopeId": "S-EXAMPLE",
+        "scopeRevision": "1",
+        "candidate": "example-candidate-1",
+        "environment": "local-example"
+      },
+      "reason": "Runtime assessment has not begun; documentation alone is not implementation evidence."
+    },
+    {
+      "id": "D04",
+      "status": "UNKNOWN",
+      "reviewedTypes": [],
+      "criteria": [
+        {
+          "id": "C-D04",
+          "description": "Scoped synthetic criterion: Features and experience.",
+          "goalIds": [
+            "G-EXAMPLE"
+          ]
+        }
+      ],
+      "evidenceIds": [],
+      "binding": {
+        "plane": "implementation",
+        "scopeId": "S-EXAMPLE",
+        "scopeRevision": "1",
+        "candidate": "example-candidate-1",
+        "environment": "local-example"
+      },
+      "reason": "Runtime assessment has not begun; documentation alone is not implementation evidence."
+    },
+    {
+      "id": "D05",
+      "status": "UNKNOWN",
+      "reviewedTypes": [],
+      "criteria": [
+        {
+          "id": "C-D05",
+          "description": "Scoped synthetic criterion: Flows and lifecycle.",
+          "goalIds": [
+            "G-EXAMPLE"
+          ]
+        }
+      ],
+      "evidenceIds": [],
+      "binding": {
+        "plane": "implementation",
+        "scopeId": "S-EXAMPLE",
+        "scopeRevision": "1",
+        "candidate": "example-candidate-1",
+        "environment": "local-example"
+      },
+      "reason": "Runtime assessment has not begun; documentation alone is not implementation evidence."
+    },
+    {
+      "id": "D06",
+      "status": "UNKNOWN",
+      "reviewedTypes": [],
+      "criteria": [
+        {
+          "id": "C-D06",
+          "description": "Scoped synthetic criterion: Access and trust.",
+          "goalIds": [
+            "G-EXAMPLE"
+          ]
+        }
+      ],
+      "evidenceIds": [],
+      "binding": {
+        "plane": "implementation",
+        "scopeId": "S-EXAMPLE",
+        "scopeRevision": "1",
+        "candidate": "example-candidate-1",
+        "environment": "local-example"
+      },
+      "reason": "Runtime assessment has not begun; documentation alone is not implementation evidence."
+    },
+    {
+      "id": "D07",
+      "status": "UNKNOWN",
+      "reviewedTypes": [],
+      "criteria": [
+        {
+          "id": "C-D07",
+          "description": "Scoped synthetic criterion: Architecture and code.",
+          "goalIds": [
+            "G-EXAMPLE"
+          ]
+        }
+      ],
+      "evidenceIds": [],
+      "binding": {
+        "plane": "implementation",
+        "scopeId": "S-EXAMPLE",
+        "scopeRevision": "1",
+        "candidate": "example-candidate-1",
+        "environment": "local-example"
+      },
+      "reason": "Runtime assessment has not begun; documentation alone is not implementation evidence."
+    },
+    {
+      "id": "D08",
+      "status": "UNKNOWN",
+      "reviewedTypes": [],
+      "criteria": [
+        {
+          "id": "C-D08",
+          "description": "Scoped synthetic criterion: Contracts and storage.",
+          "goalIds": [
+            "G-EXAMPLE"
+          ]
+        }
+      ],
+      "evidenceIds": [],
+      "binding": {
+        "plane": "implementation",
+        "scopeId": "S-EXAMPLE",
+        "scopeRevision": "1",
+        "candidate": "example-candidate-1",
+        "environment": "local-example"
+      },
+      "reason": "Runtime assessment has not begun; documentation alone is not implementation evidence."
+    },
+    {
+      "id": "D09",
+      "status": "UNKNOWN",
+      "reviewedTypes": [],
+      "criteria": [
+        {
+          "id": "C-D09",
+          "description": "Scoped synthetic criterion: Integration and compatibility.",
+          "goalIds": [
+            "G-EXAMPLE"
+          ]
+        }
+      ],
+      "evidenceIds": [],
+      "binding": {
+        "plane": "implementation",
+        "scopeId": "S-EXAMPLE",
+        "scopeRevision": "1",
+        "candidate": "example-candidate-1",
+        "environment": "local-example"
+      },
+      "reason": "Runtime assessment has not begun; documentation alone is not implementation evidence."
+    },
+    {
+      "id": "D10",
+      "status": "UNKNOWN",
+      "reviewedTypes": [],
+      "criteria": [
+        {
+          "id": "C-D10",
+          "description": "Scoped synthetic criterion: Deployment and operations.",
+          "goalIds": [
+            "G-EXAMPLE"
+          ]
+        }
+      ],
+      "evidenceIds": [],
+      "binding": {
+        "plane": "implementation",
+        "scopeId": "S-EXAMPLE",
+        "scopeRevision": "1",
+        "candidate": "example-candidate-1",
+        "environment": "local-example"
+      },
+      "reason": "Runtime assessment has not begun; documentation alone is not implementation evidence."
+    },
+    {
+      "id": "D11",
+      "status": "UNKNOWN",
+      "reviewedTypes": [],
+      "criteria": [
+        {
+          "id": "C-D11",
+          "description": "Scoped synthetic criterion: Performance and reliability.",
+          "goalIds": [
+            "G-EXAMPLE"
+          ]
+        }
+      ],
+      "evidenceIds": [],
+      "binding": {
+        "plane": "implementation",
+        "scopeId": "S-EXAMPLE",
+        "scopeRevision": "1",
+        "candidate": "example-candidate-1",
+        "environment": "local-example"
+      },
+      "reason": "Runtime assessment has not begun; documentation alone is not implementation evidence."
+    },
+    {
+      "id": "D12",
+      "status": "UNKNOWN",
+      "reviewedTypes": [],
+      "criteria": [
+        {
+          "id": "C-D12",
+          "description": "Scoped synthetic criterion: Verification and continuity.",
+          "goalIds": [
+            "G-EXAMPLE"
+          ]
+        }
+      ],
+      "evidenceIds": [],
+      "binding": {
+        "plane": "implementation",
+        "scopeId": "S-EXAMPLE",
+        "scopeRevision": "1",
+        "candidate": "example-candidate-1",
+        "environment": "local-example"
+      },
+      "reason": "Runtime assessment has not begun; documentation alone is not implementation evidence."
+    }
+  ],
+  "findings": [],
+  "evidence": [
+    {
+      "id": "E-EXAMPLE",
+      "path": "evidence.md",
+      "sha256": "7e7d72bb5a8c35723983a1fb44eccc0f13b467483b55521bbd84c8c7ef9b9ea1",
+      "binding": {
+        "plane": "implementation",
+        "scopeId": "S-EXAMPLE",
+        "scopeRevision": "1",
+        "candidate": "example-candidate-1",
+        "environment": "local-example"
+      }
+    }
+  ],
+  "gates": [
+    {
+      "id": "G-STRUCTURE",
+      "goalIds": [
+        "G-EXAMPLE"
+      ],
+      "dimensionIds": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D09",
+        "D10",
+        "D11",
+        "D12"
+      ],
+      "mandatory": true,
+      "applicable": true,
+      "result": "NOT RUN",
+      "method": "Run the declared candidate checks after implementation.",
+      "expected": "Actual scoped behavior passes in the stated environment.",
+      "workload": "To be defined for the actual customer project before implementation.",
+      "evidenceIds": [],
+      "binding": {
+        "plane": "implementation",
+        "scopeId": "S-EXAMPLE",
+        "scopeRevision": "1",
+        "candidate": "example-candidate-1",
+        "environment": "local-example"
+      },
+      "reason": "The example supplies no running customer product."
+    }
+  ]
+}

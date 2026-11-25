@@ -1,0 +1,38 @@
+{
+  "name": "notchlore",
+  "version": "2.0.0",
+  "description": "Business goals to coherent project knowledge, safe agent handoffs, and evidence-bound delivery checks.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "notchlore": "bin/notchlore.mjs"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "skills",
+    "prompts",
+    "schemas",
+    "examples",
+    "GUIDE.md",
+    "PUBLICATION.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node scripts/check-package.mjs && node scripts/render-summary.mjs --check",
+    "prepublishOnly": "npm test && npm run check",
+    "release": "python3 scripts/build-release.py",
+    "docs": "node scripts/render-summary.mjs"
+  },
+  "keywords": [
+    "codex",
+    "agent-skill",
+    "chatgpt",
+    "project-delivery",
+    "engineering",
+    "notchlore"
+  ]
+}
